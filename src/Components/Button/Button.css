@@ -1,0 +1,64 @@
+.container {
+  position: relative;
+  display: inline-block;
+  background: transparent;
+  border: 1px solid #03e9f4;
+  padding: 10px 20px;
+  color: #03e9f4;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  cursor: pointer;
+  outline: 0;
+}
+.container:hover {
+  background: #03e9f4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+}
+.container:hover.primary {
+  color: #39c4d5;
+  border-color: #39c4d5;
+  box-shadow: 0 0 5px #39c4d5, 0 0 25px #39c4d5, 0 0 50px #39c4d5, 0 0 100px #39c4d5;
+}
+.container:hover.secondary {
+  color: #607d8b;
+  border-color: #607d8b;
+  box-shadow: 0 0 5px #607d8b, 0 0 25px #607d8b, 0 0 50px #607d8b, 0 0 100px #607d8b;
+}
+
+.contentWrapper {
+  display: block;
+  line-height: 1;
+}
+
+.icon {
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: text-top;
+}
+
+.large {
+  padding: 15px 25px;
+  font-size: 20px;
+}
+.large .icon {
+  margin-right: 15px;
+}
+.large .resetMarginRight {
+  margin-right: 0;
+}
+
+.small {
+  padding: 7px 10px;
+  font-size: 14px;
+}
+.small .icon {
+  margin-right: 5px;
+}
+.small .resetMarginRight {
+  margin-right: 0;
+}/*# sourceMappingURL=Button.css.map */
