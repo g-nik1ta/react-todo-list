@@ -1,12 +1,12 @@
 import React from 'react';
-import './App.css';
-import { MarkList } from './Components/MarksList';
+import 'styles/App.scss';
+import MarksList from 'Components/MarksList/MarksList';
 
 function App() {
     return (
         <div className="App">
             <header>
-                <MarkList />
+                <MarksList />
             </header>
         </div>
     );

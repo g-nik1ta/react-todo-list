@@ -1,0 +1,243 @@
+/* Текстовые */
+
+.text_center {
+    text-align: center;
+}
+
+.text_right {
+    text-align: right;
+} 
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.undecorated_text {
+    text-decoration: none;
+} 
+
+
+/* Блочные */
+
+.fixed {
+    position: fixed;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.pos_sticky {
+    position: sticky;
+}
+
+
+.float_left {
+    float: left;
+}
+
+.float_right {
+    float: right;
+} 
+ 
+
+.zIndex {
+    z-index: 1;
+}
+ 
+.overflow_hidden {
+    overflow: hidden;
+}
+ 
+.overflowX_hidden {
+    overflow-x: hidden;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.default {
+    cursor: default;
+}
+
+.auto_scroll {
+    scroll-behavior: auto;
+}
+
+.no_scroll {
+    overflow-y: hidden;
+}
+ 
+
+/* FLex */
+
+.flex {
+    display: flex;
+}
+
+.flex_centered_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.column {
+    flex-direction: column;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.row_reverse {
+    flex-direction: row-reverse;
+}
+
+.column_reverse {
+    flex-direction: column-reverse;
+}
+
+
+.space_between {
+    justify-content: space-between;
+}
+
+.space_around {
+    justify-content: space-around;
+}
+
+.justify_end {
+    justify-content: flex-end;
+}
+
+.justify_start {
+    justify-content: flex-start;
+}
+
+.justify_center {
+    justify-content: center;
+}
+
+
+.align_center {
+    align-items: center;
+}
+
+.align_baseline {
+    align-items: baseline;
+}
+
+.align_stretch {
+    align-items: stretch;
+}
+
+.align_start {
+    align-items: flex-start;
+}
+
+.align_end {
+    align-items: flex-end;
+}
+
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.nowrap {
+    flex-wrap: nowrap;
+}
+
+
+/* display */
+
+.hide {
+    display: none;
+}
+
+.block {
+    display: block;
+}
+
+.grid {
+    display: grid;
+}
+
+.inline_flex {
+    display: inline-flex;
+}
+
+.inline_block {
+    display: inline-block;
+}
+
+
+/* width, height */
+
+.max_width_full {
+    max-width: 100%;
+}
+
+.full_width {
+    width: 100%;
+}
+
+.full_height {
+    height: 100%;
+}
+
+.half_width {
+    width: 50%;
+}
+
+.fit_content_width {
+    width: fit-content;
+}
+
+
+/* Различные */
+
+.undecorated_ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+} 
+
+
+.grow {
+    flex-grow: 1;
+}
+
+.grow_0 {
+    flex-grow: 0;
+}
+
+.basis_0 {
+    flex-basis: 0;
+}
+
+.shrink_0 {
+    flex-shrink: 0;
+}
+
+
+.appearance_none {
+    -webkit-appearance: none!important;
+    -moz-appearance: none!important;
+    appearance: none!important;
+}
+
+.no_focus_outline:focus,
+.no_focus_outline:active {
+    outline: none !important;
+}

@@ -1,0 +1,20 @@
+$xxl-size-min-width: 1441px;
+$xl-size-max-width: 1440px;
+
+$lg-size-max-width: 1024px;
+
+$md-size-max-width: 768px;
+$sm-size-max-width: 440px;
+$xs-size-max-width: 340px; 
+
+
+:export {
+    xxlSizeMinWidth: 1441;
+    xlSizeMaxWidth: 1440;
+
+    lgSizeMaxWidth: 1024;
+
+    mdSizeMaxWidth: 768;
+    smSizeMaxWidth: 440;
+    xsSizeMaxWidth: 340;
+}

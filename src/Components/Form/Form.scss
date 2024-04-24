@@ -1,0 +1,20 @@
+.formContent {
+    display: flex;
+}
+
+.submitBtn {
+    flex-shrink: 0;
+}
+
+.inputField {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+    margin-right: 20px;
+}
