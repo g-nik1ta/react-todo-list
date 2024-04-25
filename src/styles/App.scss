@@ -14,17 +14,14 @@
     &::-webkit-scrollbar {
         width: 4px;
         height: 4px;
-        border-radius: 6px;
     }
 
     &::-webkit-scrollbar-thumb {
-        background-color: rgb(87, 92, 102);
-        border-radius: 6px;
+        background-color: $main-color-3;
     }
 
     &::-webkit-scrollbar-track {
-        background-color: rgb(34, 42, 53);
-        border-radius: 6px;
+        background-color: $main-color-2;
     }
 }
 
@@ -32,14 +29,29 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    color: #fff;
 
     header {
-        align-items: center;
-        color: #fff;
+        margin: 16px auto auto;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        min-height: 100vh;
+        gap: 14px;
+
+        a {
+            color: #fff;
+            font-size: 17px;
+
+            &.active {
+                text-decoration: underline;
+                color: $main-color-3;
+            }
+
+            @media (hover: hover) {
+                &:hover {
+                    color: $main-color-2;
+                }
+            }
+        }
     }
 }
 

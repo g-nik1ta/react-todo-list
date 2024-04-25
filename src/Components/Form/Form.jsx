@@ -1,18 +1,18 @@
 import React, { useEffect, useRef } from 'react';
 import './Form.scss';
-import { Button } from 'Components/Button/Button';
+import Button from 'Components/Button/Button';
 
-const Form = ({addItem}) => {
+const Form = ({ addItem }) => {
     const inputRef = useRef();
     const formRef = useRef();
 
     const onSubmit = (e) => {
         e.preventDefault();
+        
         const newItemValue = inputRef.current.value.trim();
-
         if (!newItemValue) return;
 
-        addItem({ value: newItemValue, uid: Date.now() });
+        addItem(newItemValue);
         formRef.current.reset();
     }
 
@@ -21,23 +21,21 @@ const Form = ({addItem}) => {
     }, [])
 
     return (
-        <form ref={formRef} onSubmit={onSubmit}>
-            <div className="formContent">
-                <input
-                    type="text"
-                    ref={inputRef}
-                    placeholder="Add new mark"
-                    className="inputField"
-                />
-                <Button
-                    className="submitBtn"
-                    size="large"
-                    color="primary"
-                    iconType="plus"
-                >
-                    Add
-                </Button>
-            </div>
+        <form ref={formRef} onSubmit={onSubmit} className='column-if_md_size'>
+            <input
+                type="text"
+                ref={inputRef}
+                placeholder="Add new task"
+                className="inputField"
+            />
+            <Button
+                className="submitBtn full_width-if_md_size"
+                size="large"
+                color="primary"
+                iconType="plus"
+            >
+                Add
+            </Button>
         </form>
     )
 }

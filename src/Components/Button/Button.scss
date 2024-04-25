@@ -1,76 +1,95 @@
+@import "styles/common_styles/index";
+
+@mixin box-shadow($color) {
+    box-shadow: 0 0 5px $color,
+        0 0 12px $color,
+        0 0 8px $color,
+        0 0 20px $color;
+}
+
 .button-container {
     position: relative;
     display: inline-block;
     background: transparent;
-    border: 1px solid #03e9f4;
+    border: 1px solid $main-color;
     padding: 10px 20px;
-    color: #03e9f4;
+    color: $main-color;
     font-size: 16px;
     text-decoration: none;
     text-transform: uppercase;
-    transition: .5s;
+    transition: .35s;
     letter-spacing: 4px;
     cursor: pointer;
     outline: 0;
 
-    &:hover {
-        background: #03e9f4;
-        color: #fff;
-        border-radius: 5px;
-        box-shadow: 0 0 5px #03e9f4,
-            0 0 25px #03e9f4,
-            0 0 50px #03e9f4,
-            0 0 100px #03e9f4;
+    @media (hover: hover) {
+        &:hover {
+            background: $main-color;
+            color: $main-color;
+            border-radius: 5px;
+            @include box-shadow($main-color);
 
-        &.primary {
-            color: #39c4d5;
-            border-color: #39c4d5;
-            box-shadow: 0 0 5px #39c4d5,
-                0 0 25px #39c4d5,
-                0 0 50px #39c4d5,
-                0 0 100px #39c4d5;
+            &.primary {
+                color: $main-color-2;
+                border-color: $main-color-2;
+                @include box-shadow($main-color-2);
+
+                svg path {
+                    fill: $main-color-2;
+                }
+            }
+
+            &.secondary {
+                color: $main-color-3;
+                border-color: $main-color-3;
+                @include box-shadow($main-color-3);
+
+                svg path {
+                    fill: $main-color-3;
+                }
+            }
+
         }
+    }
 
-        &.secondary {
-            color: #607d8b;
-            border-color: #607d8b;
-            box-shadow: 0 0 5px #607d8b,
-                0 0 25px #607d8b,
-                0 0 50px #607d8b,
-                0 0 100px #607d8b;
+    &.large {
+        padding: 10px 24px;
+        font-size: 18px;
+    }
+
+    &.small {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .content {
+        color: inherit;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        font-weight: 500;
+
+        svg {
+            max-width: 16px;
+            max-height: 16px;
         }
-
-    }
-
-}
-
-.contentWrapper {
-    display: block;
-    line-height: 1;
-}
-
-.large {
-    padding: 15px 25px;
-    font-size: 20px;
-
-    .icon {
-        margin-right: 15px;
-    }
-
-    .resetMarginRight {
-        margin-right: 0;
     }
 }
 
-.small {
-    padding: 7px 10px;
-    font-size: 14px;
 
-    .icon {
-        margin-right: 5px;
-    }
-
-    .resetMarginRight {
-        margin-right: 0;
+@media screen and (max-width: $md-size-max-width) {
+    .button-container {
+        &.large {
+            padding: 8px 14px;
+            font-size: 16px;
+        }
+        &.small {
+            padding: 8px;
+            font-size: 12px;
+        }
+        .content svg {
+            max-width: 12px;
+            max-height: 12px;
+        }
     }
 }

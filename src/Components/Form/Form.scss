@@ -1,20 +1,50 @@
-.formContent {
+@import "styles/common_styles/index";
+
+form {
+    margin-top: 24px;
     display: flex;
+    align-items: center;
+    
+    .inputField {
+        width: 100%;
+        padding: 10px 6px;
+        font-size: 16px;
+        color: #fff;
+        border: none;
+        border-bottom: 1px solid #fff;
+        outline: none;
+        background: transparent;
+        margin-right: 20px;
+        transition: .25s ease-in-out;
+
+        &::placeholder {
+            opacity: .5;
+        }
+
+        &:focus {
+            border-bottom-color: $main-color-2;
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                border-bottom-color: $main-color-2;
+            }
+        }
+    }
 }
 
-.submitBtn {
-    flex-shrink: 0;
-}
 
-.inputField {
-    width: 100%;
-    padding: 10px 0;
-    font-size: 16px;
-    color: #fff;
-    margin-bottom: 30px;
-    border: none;
-    border-bottom: 1px solid #fff;
-    outline: none;
-    background: transparent;
-    margin-right: 20px;
+@media screen and (max-width: $md-size-max-width) {
+    form {
+        gap: 12px;
+        margin-top: 12px;
+
+        .inputField {
+            margin-right: 0;
+        }
+
+        .button-container .content {
+            justify-content: center;
+        }
+    }
 }

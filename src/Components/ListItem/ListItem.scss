@@ -1,13 +1,21 @@
+@import "styles/common_styles/index";
 
-.listItem {
+.list_item {
     display: flex;
-    margin-bottom: 15px;
+
+    &+& {
+        margin-top: 16px;
+    }
+
+    .value {
+        width: 100%;
+        padding-right: 10px;
+        text-align: left;
+    }
 }
 
-.listItemValueWrapper {
-    width: 100%;
-    padding-right: 10px;
-    text-align: left;
+@media screen and (max-width: $md-size-max-width) {
+    .list_item+.list_item {
+        margin-top: 8px;
+    }
 }
-
-

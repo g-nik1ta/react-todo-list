@@ -1,18 +1,18 @@
 import React from 'react';
 import './ListItem.scss';
-import { Button } from 'Components/Button/Button';
+import Button from 'Components/Button/Button';
 
-const ListItem = ({ item, removeItem }) => {
+const ListItem = ({ item, removeItem, remove }) => {
     return (
-        <li className="listItem">
-            <div className="listItemValueWrapper">
+        <li className="list_item">
+            <span className="value">
                 {item.value}
-            </div>
+            </span>
             <Button
                 color="secondary"
                 size="small"
-                onClick={() => removeItem(item.uid)}
-                iconType="cross"
+                onClick={() => removeItem(item.id)}
+                iconType={remove ? 'plus' : "cross"}
             />
         </li>
     )

@@ -3,19 +3,18 @@ import './Button.scss';
 import Plus from "svg/Plus";
 import Cross from "svg/Cross";
 
-export const Button = ({ children, className, size, color, iconType, ...props }) => {
-
+const Button = ({ children, className = '', size = '', color = '', iconType, ...props }) => {
     return (
         <button
             className={
                 "button-container" +
-                (size ? ` ${size}` : "") +
-                (color ? ` ${color}` : "") +
-                (className ? ` ${className}` : "")
+                (size && ` ${size}`) +
+                (color && ` ${color}`) +
+                (className && ` ${className}`)
             }
             {...props}
         >
-            <span className="contentWrapper">
+            <span className="content">
                 {
                     iconType === 'plus'
                         ?
@@ -32,3 +31,5 @@ export const Button = ({ children, className, size, color, iconType, ...props })
         </button>
     )
 }
+
+export default Button;
